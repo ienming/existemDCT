@@ -1,0 +1,1548 @@
+<html>
+
+<head>
+    <!--site of this page : https://ienming.github.io/existemDCT/index.html -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超公制 EXISTEM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="Shortcut Icon" type="image/x-icon" href="a-index/favicon.png">
+
+    <style>
+        body {
+            font-family: "NotoSansCJKtc", "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", "Apple LiGothic Medium";
+            background-color: #dfdfdf;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article {
+                width: 678px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article {
+                width: 900px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            article {
+                width: 365px;
+            }
+        }
+
+        ::selection {
+            background-color: #222222;
+            color: #dfdfdf;
+        }
+
+        .scrollToTop>img {
+            position: fixed;
+            top: 6%;
+            left: 2%;
+            width: 100px;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .scrollToTop>img {
+                position: fixed;
+                top: 85%;
+                left: 78%;
+                width: 15%;
+                background-color: #222222;
+            }
+        }
+
+        .scrollToTop img:nth-of-type(2):hover {
+            opacity: 0;
+            cursor: pointer;
+            transition-timing-function: ease-in-out;
+            transition: 1s;
+        }
+
+        .scrollToTop img:nth-of-type(2):not(:hover) {
+            opacity: 1;
+            transition-timing-function: ease-in-out;
+            transition: 0.3s;
+        }
+
+        /* #wordLogo {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            width: 480px;
+        } */
+
+        /* @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css); */
+
+        .logo {
+            position: absolute;
+            width: 900px;
+            height: 200px;
+            top: 38%;
+            left: 16%;
+            letter-spacing: 20px;
+            color: #fff;
+            font-size: 120px;
+            text-align: center;
+            text-shadow: 0 0 0.2em #fff, 0 0 0.2em #fff;
+            /* font-family: "cwTeXYen", "sans-serif", "NotoSansCJKtc"; */
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            /* #wordLogo {
+                position: absolute;
+                top: 40%;
+                left: 18%;
+                width: 250px;
+            } */
+            .logo {
+                width: 100px;
+                height: 100px;
+                top: 8%;
+                left: 8%;
+                font-size: 70px;
+            }
+        }
+
+        #movieContainer {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: block;
+        }
+
+        #movie {
+            width: 100%;
+        }
+
+        #intro {
+            width: 552px;
+            margin: 179px auto 150px auto;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #222222;
+            font-family: Microsoft JhengHei;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            #intro {
+                width: 90%;
+                font-size: 25px;
+                margin: 80 auto 50 auto;
+            }
+            #movie {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        #headingLeft {
+            width: 900px;
+            position: static;
+            padding: 0;
+        }
+
+        #headingRight {
+            width: 900px;
+            position: static;
+            text-align: right;
+            padding: 0;
+        }
+
+        .title-mobile {
+            display: none;
+            font-size: 30px;
+            width: 300px;
+            margin-left: 32px;
+        }
+
+        .title-right {
+            display: inline-block;
+            font-size: 30px;
+            width: 300px;
+            margin-left: 32px;
+        }
+
+        .title-left {
+            display: inline-block;
+            font-size: 30px;
+            width: 300px;
+            margin-right: 32px;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            #headingLeft,
+            #headingRight {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .title-mobile,
+            .title-right {
+                display: block;
+                background-color: #dfdfdf;
+                text-align: center;
+                margin: 0 auto;
+                width: 95%;
+                font-size: 25px;
+            }
+
+            .title-left {
+                display: none;
+                background-color: #dfdfdf;
+                text-align: center;
+                margin: 0 auto;
+                width: 95%;
+                font-size: 25px;
+            }
+        }
+
+        .card {
+            margin-bottom: 325px;
+        }
+
+        .card-body {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .card {
+                margin-bottom: 80px;
+                width: 100%;
+            }
+            .card-body {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        .p {
+            width: 552px;
+            margin: 0 auto 32px auto;
+            font-size: 18px;
+            line-height: 1.7;
+            letter-spacing: 1.5;
+            color: #222222;
+            text-align: justify;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .p {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .card-body>.p,
+            .card-body>div>.p,
+            .card-body>div>h2 {
+                width: 90%;
+                padding: 4%;
+            }
+            /* .card-body>div>h2 {
+                width: 90%;
+                padding: 4%;
+            } */
+        }
+
+        .h2 {
+            width: 552px;
+            margin: 0 auto;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 1.5;
+            text-align: left;
+            color: #222222;
+            margin-bottom: 57px;
+        }
+
+        .h3 {
+            width: 552px;
+            margin: 0 auto;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 1.5;
+            text-align: left;
+            color: #222222;
+            margin-bottom: 45px;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .h2 {
+                margin-bottom: 30px;
+                font-size: 23px;
+            }
+            .h3 {
+                margin-left: 30px;
+                margin-bottom: 30px;
+                font-size: 20px;
+            }
+        }
+
+        .pic1 {
+            position: static;
+        }
+
+        .viewer {
+            width: 412px;
+            height: 412px;
+            overflow: hidden;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .viewer {
+                width: 90%;
+                height: 0;
+                padding-bottom: 90%;
+                margin: 20px auto;
+            }
+        }
+
+        .viewer>img {
+            transition: all 1s ease;
+            max-width: 100%;
+        }
+
+        .viewer:hover img {
+            transform: scale(1.25);
+        }
+
+        .piccenter {
+            margin: 30px auto 30px auto;
+            width: 412px;
+            display: block;
+        }
+
+        .youtube {
+            margin: 30px auto 30px auto;
+            width: 560px;
+            display: block;
+        }
+
+        .person-icon {
+            width: 5%;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .person-icon {
+                width: 12%;
+                margin-bottom: 1%;
+            }
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: #dfdfdf;
+            border-bottom: 0px;
+        }
+
+        .blockquote {
+            width: 70%;
+            font-size: 25px;
+            line-height: 1.7;
+            letter-spacing: 3;
+            font-weight: 500;
+            color: #2fcae5;
+            padding: 50px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            text-align: center;
+            font-style: italic;
+            border-top-style: dashed;
+            border-bottom-style: dashed;
+            border-width: 1px;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .blockquote {
+                width: 90%;
+                text-align: left;
+                font-size: 20px;
+                padding: 30px 25px;
+            }
+        }
+
+        .imgcaption {
+            font-size: 10px;
+            text-align: right;
+            margin-top: 15px;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .imgcaption {
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 14px;
+            }
+        }
+
+        .interactionimgcaption {
+            font-size: 10px;
+            text-align: center;
+            /* padding-top: 100px; */
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .interactionimgcaption {
+                max-width: 325px;
+                margin-right: 20px;
+                margin-left: 20px;
+                font-size: 14px;
+                /* padding-top: 40px; */
+            }
+        }
+
+        .flex-container {
+            display: flex;
+            width: 552px;
+            height: 50px;
+            justify-content: center;
+            margin: 0 auto;
+            margin-bottom: 65px
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .flex-container {
+                width: 100%;
+                /* 手機不會有一塊陰影，但距離下面邊界很近 */
+                margin-bottom: 0px
+            }
+        }
+
+        .flex-item {
+            width: 50px;
+        }
+
+        .figure {
+            margin-bottom: 65px;
+        }
+
+        #horizon-pic {
+            width: 552px;
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            .figure {
+                margin-left: -20px;
+                width: 100%;
+                margin: 30 0 65 0;
+            }
+            .figure>img {
+                width: 100%;
+            }
+            #horizon-pic {
+                width: 100%;
+            }
+        }
+
+        .closeButton {
+            border-radius: 50%;
+            border: none;
+            text-align: center;
+            font-size: 50px;
+            font-weight: lighter;
+            width: 80px;
+            height: 80px;
+            position: sticky;
+            right: 19%;
+            top: 6%;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .closeButton span {
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .closeButton span:hover {
+            color: #2fcae5;
+            transition: 0.8s;
+            transition-timing-function: ease-in-out;
+            transform: rotate(360deg);
+            outline: none;
+        }
+
+        .closeButton span:not(:hover) {
+            color: #222222;
+            transition: 0.8s;
+            transition-timing-function: ease-in-out;
+            outline: none;
+        }
+
+        .btn {
+            text-align: left;
+            white-space: normal;
+        }
+
+        .btn-link {
+            color: #222222;
+        }
+
+        .btn-link:hover {
+            text-decoration: none;
+            color: #2fcae5;
+        }
+
+        .footerIcon {
+            display: inline-block;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #222222;
+            line-height: 2.25;
+        }
+
+        /* 動態圖1 */
+
+        .change1 {
+            padding-bottom: 136.688762%;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            color: #fff;
+            margin-left: -5px;
+            margin-right: 5px;
+            font-size: 10px;
+            font-weight: 600;
+            /* letter-spacing: -0.9; */
+        }
+
+        .change1pic {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #changeV1 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(152/412*100%);
+            bottom: calc(265/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeV1;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeV1 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #2fcae5;
+                width: calc(46/412*100%);
+            }
+        }
+
+        #changeV2 {
+            position: absolute;
+            width: calc(86/412*100%);
+            left: calc(193/412*100%);
+            bottom: calc(253/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeV2;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeV2 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #d744ff;
+                width: calc(86/412*100%);
+            }
+        }
+
+        #changeV3 {
+            position: absolute;
+            width: calc(86/412*100%);
+            left: calc(235/412*100%);
+            bottom: calc(242/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeV3;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeV3 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #dfdfdf;
+                width: calc(86/412*100%);
+            }
+        }
+
+        #changeM1 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(110/412*100%);
+            bottom: calc(230/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeV1;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        #changeM2 {
+            position: absolute;
+            width: calc(64/412*100%);
+            left: calc(152/412*100%);
+            bottom: calc(220/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeM2;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeM2 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #d744ff;
+                width: calc(64/412*100%);
+            }
+        }
+
+        #changeM3 {
+            position: absolute;
+            width: calc(64/412*100%);
+            left: calc(193/412*100%);
+            bottom: calc(209/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeM3;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeM3 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #dfdfdf;
+                width: calc(64/412*100%);
+            }
+        }
+
+        #changeI1 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(234/412*100%);
+            bottom: calc(197/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeV1;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        #changeI2 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(274/412*100%);
+            bottom: calc(186/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeI2;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeI2 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #d744ff;
+                width: calc(46/412*100%);
+            }
+        }
+
+        #changeI3 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(356/412*100%);
+            bottom: calc(175/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeI3;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeI3 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: #dfdfdf;
+                width: calc(46/412*100%);
+            }
+        }
+
+        #changeP1 {
+            position: absolute;
+            width: calc(190/412*100%);
+            left: calc(211/412*100%);
+            bottom: calc(164/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeP1;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeP1 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                width: calc(190/412*100%);
+                background-color: gray;
+            }
+        }
+
+        #changeP2 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(315/412*100%);
+            bottom: calc(152/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeP2;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes changeP2 {
+            0% {
+                width: 0px;
+            }
+            100% {
+                background-color: gray;
+                width: calc(46/412*100%);
+            }
+        }
+
+        #changeP3 {
+            position: absolute;
+            width: calc(46/412*100%);
+            left: calc(356/412*100%);
+            bottom: calc(141/301.42*100%);
+            height: 14px;
+            border-radius: 10px;
+            -webkit-animation-name: changeP2;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-delay: 1.2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        /* 動態圖2 */
+
+        .change2 {
+            text-align: center;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        #change21 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            padding: 4.6% 1.3%;
+            -webkit-animation-name: change21;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 5s;
+            -webkit-animation-fill-mode: forwards;
+            /* animation-iteration-count: infinite; */
+        }
+
+        @-webkit-keyframes change21 {
+            0% {
+                /* safari讀不到border */
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #2fcae5 solid;
+                color: #222222;
+            }
+        }
+
+        #change22 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+            padding: 4.6% 1.5%;
+            -webkit-animation-name: change22;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 6s;
+            -webkit-animation-fill-mode: forwards;
+            /* animation-iteration-count: infinite; */
+        }
+
+        @-webkit-keyframes change22 {
+            0% {
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #d744ff solid;
+                color: #222222;
+            }
+        }
+
+        #change23 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+            padding: 4.6% 0;
+            letter-spacing: -1;
+            -webkit-animation-name: change23;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 7s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes change23 {
+            0% {
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #2fcae5 solid;
+                color: #222222;
+            }
+        }
+
+        #change24 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+            padding: 4.6% 1.5%;
+            -webkit-animation-name: change24;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 8s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes change24 {
+            0% {
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #d744ff solid;
+                color: #222222;
+            }
+        }
+
+        #change25 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+            padding: 4.6% 0;
+            letter-spacing: -1;
+            -webkit-animation-name: change25;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 9s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes change25 {
+            0% {
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #2fcae5 solid;
+                color: #222222;
+            }
+        }
+
+        #change26 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+            padding: 4.6% 1.5%;
+            -webkit-animation-name: change26;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 10s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes change26 {
+            0% {
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #d744ff solid;
+                color: #222222;
+            }
+        }
+
+        #change27 {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            float: left;
+            margin-left: 10px;
+            padding: 4.6% 0.2%;
+            letter-spacing: -0.9;
+            -webkit-animation-name: change27;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-delay: 11s;
+            -webkit-animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes change27 {
+            0% {
+                border: 2.5px #fff solid;
+            }
+            100% {
+                border: 2.5px #2fcae5 solid;
+                color: #222222;
+            }
+        }
+
+        /* 動態圖2的手機版*/
+
+        @media only screen and (min-width: 300px) and (max-width: 600px) {
+            #change21,
+            #change22,
+            #change23,
+            #change24,
+            #change25,
+            #change26,
+            #change27 {
+                margin-left: 26%;
+                margin-bottom: 1%;
+                float: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="movieContainer" style="position: relative">
+        <video id="movie" preload="auto" controls playsinline autoplay muted loop>
+            <source src="a-index/banner.mp4" type="video/mp4" allow="encrypted-media" />
+        </video>
+        <!-- <img id="wordLogo" src="a-index/logo-word.png" border="0"> -->
+        <div class="logo">超公制</div>
+    </div>
+
+    <article style="max-width: 900px; margin: 0 auto; position: relative;">
+
+        <div id="intro">
+            <div class="p">測量工具被創造之後，人們身處的時空環境就如同受到限制一般。從沙漏到時鐘，侷限著人們對於時間的認知；量角器與捲尺的發明，反倒使人們對空間概念變得偏狹。</div>
+            <div class="p">對於不同觀看者來說，時間和空間應是相對的。對老鼠來說，恐龍是個龐然大物；但對螞蟻而言，老鼠卻無比巨大。人類平均壽命大約 70、 80 歲，海龜能活到 150 歲，而成蟬的壽命卻最多只有四周。</div>
+            <div class="p">假若世界不再被公式化的度量衡制約，而是回歸最直接的感受和狀態， 我們的生活會因此失序，抑或是找到更彈性的步調呢？</div>
+        </div>
+
+        <!-- 這邊是第1張卡片 視覺一-->
+        <div id="accordion">
+            <div style="border: 0ch;" class="card">
+                <div class="card-header" id="headingLeft">
+                    <h5 class="mb-0">
+                        <button style=" position: relative; padding: 0px; border: 0px;" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <div class="viewer">
+                                <img class="pic1" src="a-index/visual1.jpg"></img>
+                            </div>
+                        </button>
+                        <div class="title-right btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div>
+                                <span style="font-weight: 500">不是動畫系的動態視覺設計故事</span>
+                                <span style="font-size: 15px">（上）</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-visual1.png"></img>
+                                <img style="width: 30px" src="a-index/logo-visual2.png"></img>
+                            </div>
+                        </div>
+                    </h5>
+                </div>
+
+                <div style="border: 0ch" id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body" style="position: relative">
+                        <button class="closeButton" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span>X</span>
+                        </button>
+                        <p class="p" style="margin-top: 30px; margin-bottom: 65px">相較於其他組員這次的畢業製作幾近從零開始學習，擔綱 2D 視覺設計的新聞四謝明倫與 3D 動畫設計的英文四廖珞安，過去不論在繪本或是平面作品中，經常負責組內視覺。只是，全然以「動態視覺設計」為媒介傳遞訊息，尤其更要結合音樂與互動進行創作，對於兩人來說都是一個全新的嘗試。</p>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">正式創作前的準備</h2>
+
+                            <p class="p">珞安過去沒有學過任何 3D 動畫軟體，於是在創作前，先花了很多時間透過線上課程學習 Cinema 4D，從最基礎的介面操作開始一步一步學習。而明倫之前有學過 After Effects，則是不斷照著
+                                YouTube 上的教學影片練習，習慣介面，並且更熟悉有什麼功能可以用。</p>
+                            <p class="p">在完整的音樂創作完畢前，因為製作時程緊湊，視覺組必須同時設計分鏡和學習軟體。珞安和明倫起初常共同討論，想到什麼就立刻畫下來。等到音樂正式出來後，再細部刪減或修正每一鏡的長度。</p>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">創作一旦開始，問題便浮上檯面</h2>
+
+                            <img class="piccenter person-icon" src="a-index/logo-visual2.png"></img>
+                            <p class="p">《超公制》總共有〈Intro〉、〈Absolute〉和〈Relative〉三段，以及中間的觀眾互動橋段。明倫表示，當他一聽見音樂，立刻想到視覺的畫面的呈現方式。於是〈Intro〉的創作時間非常短，二至三小時之內就做完了。</p>
+                            <p class="p" style="margin-bottom: 65px">〈Intro〉到〈Absolute〉之間的轉場是珞安負責的第一個部份，雖然當時還在摸索與適應 Cinema 4D，不過「畫面碎裂」的作法，網路上有許多能夠參考的影片，以致於並沒有花上太多時間。</p>
+                            <figure class="piccenter figure">
+                                <img src="d-visual1/visual1_2.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">〈Intro〉到〈Absolute〉之間的轉場有碎裂的畫面。</figcaption>
+                            </figure>
+                            <p class="p" style="margin-bottom: 65px">不過，珞安在〈Absolute〉前半段就做了比較久，很多素材都是第一次建立 3D 模型。例如畫面中出現的「沙漏」。珞安發現她明明已經檢查過無數次玻璃處是否有破洞或是製作時沒有接好，但每當沙漏翻轉時，裡面的沙子就會掉出來。</p>
+                            <figure class="piccenter figure">
+                                <img src="d-visual1/visual1_3.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">沙子噴出來反而製造出另一種特別的效果。</figcaption>
+                            </figure>
+                            <p class="p">珞安直接跑到數位內容與科技學程所開設的「基礎動畫設計」課堂，尋求曾瀚儀老師的協助。老師幫忙調整了像「摩擦力」等沙漏材質，並且建議將沙子顆粒調大，如此一來即便沙漏旋轉，沙子也不會掉出來。唯獨高速旋轉仍然有狀況，但發現沙子噴出來反而製造出另一種效果，就讓它維持現狀。</p>
+                            <p class="p" style="margin-bottom: 65px">此外，有段畫面是房間內不斷有球體飛入，製作階段亦耗費許多時間。設計分鏡畫面時，珞安希望球能依循特定的路徑前進，同時想讓它隨機出現，觀眾看起來的效果就如同一直有新的球生成。可是實際操作上卻難以達成，珞安嘗試讓很多球吸附著一個物體，並跟著路徑向前，但視覺上看起來就會是一團球體，而不是一顆一顆分別出現。</p>
+                            <figure class="piccenter figure">
+                                <img src="d-visual1/visual1_4.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">設計分鏡時希望球能依循特定的路徑前進，同時隨機出現。</figcaption>
+                            </figure>
+                            <div class="blockquote">後來有在網路上找到方法，只是解決了這個問題之後，又不斷產生新的狀況。</div>
+                            <img class="piccenter person-icon" src="a-index/logo-visual1.png"></img>
+                            <p class="p">明倫原先創作〈Absolute〉時有加上色彩，反覆檢視後發覺黑白的呈現比較適合。但因為畫面抽掉顏色，創作過程中明倫一度發現畫面單調且不夠細緻，想添加新元素。</p>
+                            <p class="p" style="margin-bottom: 65px">其中，有加入許多具象的文字，如「氵」。明倫認為「水」、「光」和「時間」概念很相近，「時間就像水一樣。」背景也有波紋的感覺。</p>
+                            <figure class="piccenter figure">
+                                <img src="d-visual1/visual1_5.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">「時間就像水一樣。」</figcaption>
+                            </figure>
+                            <p class="p">《超公制》原先的展出形式是三輸出，為了填滿三個螢幕，畫面比例很長，更明顯地感覺到畫面很「空」。開始創作不久後，組內開會上決議調整畫面比例為 1:1 的正方形，畫面反而突然變得很滿，剛好解決之前的問題。</p>
+                            <p class="p">對視覺組而言，〈Absolute〉是整個作品創作較前期的階段，再加上其音樂長、設計難度高。一旦有新的想法，明倫便都會嘗試看看。珞安則表示，當時都還在看線上教學，學習軟體基礎面。隨著時程變得緊湊後，轉變為直接查找特定效果的製作方式。</p>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">時空隧道中，2D與3D結合的歷程</h2>
+
+                            <p class="p">相較之下，創作〈Relative〉時各方面都更加得心應手，便減少了許多創作心力。從預先設計好的分鏡判斷，明倫原先以為整首〈Relative〉都需要藉由 3D 軟體製作。但上網查詢資料時，發現到其實
+                                After Effects 也能做出相同效果，於是開始嘗試著做看看。它的做法是透過 Trapcode 的插件，再用攝影機的 Top 去看就會得到 3D 的隧道效果。</p>
+                            <p class="p">雖然已經知道技術上如何執行，但明倫一開始在設計視覺時，音樂只有 demo 版，尚無法確定最終時間長度。結果最後音樂比當初預想的更長，隧道反而變得太短。</p>
+                            <p class="p">不過上述作法如同開一個畫布，從上面俯視已經是長度的極限，再畫下去就會超過畫布大小，最後只好將畫布放大兩倍。</p>
+                            <figure class="piccenter figure" id="horizon-pic">
+                                <img src="d-visual1/visual1_6.jpg" id="horizon-pic"></img>
+                                <figcaption class="imgcaption">After Effects 裡用攝影機的 Top 去看就會得到 3D 的隧道效果。</figcaption>
+                            </figure>
+                            <p class="p">這導致解析度變高了許多，輸出檔案也變相當大，接著引發程式端產生跑不動的現象，於是又反覆調整了好幾回。</p>
+                            <div class="blockquote">觀眾看到的只是一條隧道，但前後製作和調整花了很多時間和精力。</div>
+                            <p class="p">當明倫完成隧道後，珞安再將動物一隻一隻放到畫面中。而因為背景是用 After Effects，若想讓動物看似真的從隧道壁冒出來，便需要再將完成的影片放回 Cinema 4D 裡，才會產生讓動物從牆面上出現的感受。2D
+                                背景和 3D 物件結合的過程中，珞安也費了不少心思，因為背景的隧道會隨著音樂不斷地變化。</p>
+                            <p class="p">〈Relative〉後段進入宇宙中，皆採 3D 創作、檔案相當大，珞安雖然已經為畢業製作改用桌上型電腦，每調一個 frame 就要等上好一段時間。後期甚至嚴重到無法預覽，只好等做完一個段落，全部輸出後一併檢查。但經常輸出很久，裡面卻又有些小問題需要再次修正。</p>
+                        </div>
+                        <div class="flex-container">
+                            <img class="flex-item" src="a-index/logo-visual1.png"></img>
+                            <img class="flex-item" src="a-index/logo-visual2.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 這邊是第2張卡片 視覺二-->
+            <div style="border: 0ch" class="card">
+                <div class="card-header" id="headingRight">
+                    <h5 class="mb-0">
+                        <div class="title-left btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <div>
+                                <span style="font-weight: 500">不是動畫系的動態視覺設計故事</span>
+                                <span style="font-size: 15px">（下）</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-visual1.png"></img>
+                                <img style="width: 30px" src="a-index/logo-visual2.png"></img>
+                            </div>
+                        </div>
+                        <button style=" position: relative; padding: 0px; border: 0px;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="viewer">
+                                <img class="pic1" src="a-index/visual2.jpg"></img>
+                            </div>
+                        </button>
+                        <div class="title-mobile btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <div>
+                                <span style="font-weight: 500">不是動畫系的動態視覺設計故事</span>
+                                <span style="font-size: 15px">（下）</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-visual1.png"></img>
+                                <img style="width: 30px" src="a-index/logo-visual2.png"></img>
+                            </div>
+                        </div>
+                    </h5>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="closeButton" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span>X</span>
+                        </button>
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2" style="margin-top: 65px">聽見音樂之後</h2>
+
+                            <p class="p">音樂組譜寫完各首曲子後，便輪到視覺組將音樂轉化為觀眾所見的畫面。珞安認為要將畫面對上音樂的拍點是十分困難的，因為工作流程是先畫大致的分鏡圖，但待音樂出來後通常會有所差異。</p>
+                            <figure class="piccenter figure">
+                                <img src="e-visual2/visual2_1.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">視覺組會藉由歌曲 Demo 繪製分鏡圖。</figcaption>
+                            </figure>
+                            <p class="p">不過，視覺組傾向不更改設計好的分鏡，嘗試音樂對上的效果後再決定。只是聽完音樂後，有些段落反而很難想像視覺畫面應該如何呈現。</p>
+                            <div class="blockquote">會邊聽音樂，然後開始冥想。</div>
+                            <p class="p">明倫表示，只要一有靈感創作就不會耗費太多時間。「我卡最久是〈Absolute〉後面接上互動前面的部分。」最後決定先將歌曲結束的地方做完之後，再往前思考要怎麼安排。</p>
+                        </div>
+                        <img class="piccenter person-icon" src="a-index/logo-visual2.png"></img>
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">當視覺與鏡面裝置結合</h2>
+
+                            <p class="p">創作視覺畫面時，明倫和珞安僅能看到單個畫面，也就是最終於投影幕上呈現的。裝置搭建完成後，首次看到視覺效果的明倫感到十分驚豔。因為〈Absolute〉中有許多象徵指針刻度的半圓形，原先構圖僅是單純考量單格畫面是否合適，但到裝置上播放，鏡面剛好會將半圓對稱反射成一個完整的圓形。</p>
+                            <figure class="piccenter figure">
+                                <img src="e-visual2/visual2_2.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">鏡面裝置會讓設計好的影像反射出新的效果。</figcaption>
+                            </figure>
+                            <p class="p">珞安亦表示，〈Absolute〉中的凹凸方格房間，設計時僅是以視覺上向前移動為主，加上鏡面裝置後，空間延伸效果變得更加明顯，吸引觀眾目光。</p>
+                            <figure class="piccenter figure">
+                                <img src="e-visual2/visual2_3.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">《超公制》透過裝置強化空間延伸效果。</figcaption>
+                            </figure>
+                            <p class="p">超公制最佳的鏡面裝置狀態是可以完全將投影幕上的畫面四面反射，然而因為經費以及人供貼膜的緣故，實際觀看會發現鏡面會有些凹凸不平。明倫表示，不平整的鏡面不但會擋住畫面，還會因為光的漫射，導致球面的圓弧邊界不清晰。「雖然第一次看到起伏的紋路覺得很漂亮，但對作品來說不免有點干擾。」珞安說道。</p>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">或近或遠的未來</h2>
+
+                            <p class="p">視覺組辛苦地長時間盯著電腦螢幕一年後，看見成品有相當大的成就感。珞安也因此次經驗開始對相關領域產生興趣，但不免擔心自己的視力受影響。</p>
+                            <div class="blockquote">光做畢製就是一整天坐在電腦前面，盯著它看。</div>
+                            <p class="p">明倫則表示，雖然是個很不錯的挑戰，但因為創作期間很常花時間調一些十分細微的部份，做完後才發現自己沒有到非常有興趣。即便如此，他亦不排斥嘗試用 After Effects 創作。「我們這次做大部分是電繪的風格，有點想試試看手繪感的轉場設計。」</p>
+                            <figure class="piccenter figure">
+                                <img src="e-visual2/visual2_4_philip lueck.gif" width="412px"></img>
+                                <figcaption class="imgcaption">珞安未來想要嘗試製作有趣的動態視覺影片。（圖片來源：Philip Lueck @behance）</figcaption>
+                            </figure>
+                            <p class="p">此外，過去看見他人創作動態視覺作品時，不了解背後需要付出多少時間，也不清楚他們是用什麼技術達成。可能看到什麼都會覺得很神奇，現在看完則變得會思考他們是用什麼方式製作，也大概知道要怎麼做。</p>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">後記：偷偷與看完文章的你／妳分享</h2>
+                            <p class="p">珞安＆明倫：「做完之後眼睛要休息，而且電腦也要休息。健康很重要。」</p>
+                        </div>
+                        <!-- 結尾小icon -->
+                        <div class="flex-container">
+                            <img class="flex-item" src="a-index/logo-visual1.png"></img>
+                            <img class="flex-item" src="a-index/logo-visual2.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 這邊是第3張卡片 音樂一-->
+            <div style="border: 0ch" class="card">
+                <div class="card-header" id="headingLeft">
+                    <h5 class="mb-0">
+                        <button style=" position: relative; padding: 0px; border: 0px;" class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="true" aria-controls="collapseThree">
+                            <div class="viewer">
+                                <img class="pic1" src="a-index/music1.jpg"></img>
+                            </div>
+                        </button>
+                        <div class="title-right btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <div>
+                                <span style="font-weight: 500">淺談數位數位藝術作品聲音設計</span>
+                                <span style="font-size: 15px">（上）</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-music.png"></img>
+                            </div>
+                        </div>
+                    </h5>
+                </div>
+
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="closeButton" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span>X</span>
+                        </button>
+                        <p class="p">2017 的下半年，六位組員踏上大學生涯的最後一段旅程。以畢業製作的作品為媒介，想好好地整理並且反思，在政大數位內容與科技學程這段時光裡，我們所看到的以及學到的。</p>
+                        <p class="p" style="margin-bottom:110px">創作的最初，《超公制》是從音樂開始的。所有組員一同討論出作品大致的概念輪廓，沒有任何譜曲經驗的音樂組成員 - - 廣告四張子旻、廣告四游蔓婕，從選擇要用哪個編曲軟體開始，在網路上自己透過教學影片學習，不斷嘗試軟體裡多樣的效果器和節奏，一步一步完成三首曲子
+                            ：〈Intro〉、〈Absolute〉、〈Relative〉。
+                        </p>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">建立風格前，摸索、尋找與嘗試</h2>
+
+                            <p class="p">為了配合當初想討論的時空概念，《超公制》的三首歌不像是純音樂創作，可以完全自由發揮，需要考慮如何既能符合議題性，又讓音樂聽起來有震撼力且特別。子旻表示，「寫〈Intro〉這首歌之前，會先在心中構想一段作為最主要的旋律，再由那段旋律延伸，看看可以發展成什麼樣子。」</p>
+                            <p class="p">蔓婕也提到，當旋律定下來後，就會找出是哪個調的。只要接著用同一個和弦進行編曲，就會讓整首歌都是同樣的和弦。</p>
+                            <p class="p">初期在建立整體音樂風格時，音樂組想嘗試「未來電音」（Future Bass）這樣的音樂類型。但後來因為種種因素，聽起來沒有那麼符合。即便如此，蔓婕認為《超公制》的音樂還是在「電音」的框架下。「我們使用的是
+                                DJ 軟體，很容易讓我們的曲風接近電音。」原本就喜愛電音的子旻說：「我常聽的歌單也是偏向電音，可能也有關係吧！」</p>
+                            <figure class="piccenter figure">
+                                <img src="b-music1/music1_2.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">音樂組共用的 Spotify 歌單。</figcaption>
+                            </figure>
+                            <p class="p">音樂組的分工方式是兩個人分頭進行創作，子旻寫了作品前後的〈Intro〉和〈Relative〉，而蔓婕寫了中間的〈Absolute〉。蔓婕表示，子旻有將她的 Spotify 歌單分享給她，讓彼此藉由歌單討論和了解彼此想創作的音樂風格和元素，「我覺得有點『迷幻搖滾』或是『電音搖滾』的感覺。」</p>
+                            <img class="piccenter person-icon" src="a-index/logo-music.png"></img>
+                            <figure class="embed-responsive embed-responsive-16by9 figure youtube">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3umCYZf335w?controls=0" frameborder="0" allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <p class="p">編寫「過門」的時候，子旻不知道中間要如何串起來會比較合適，也不清楚要拍子要怎麼抓。她就參考共用歌單裡面的音樂，例如 San Holo 的〈trip〉；研究市面上音樂從主歌到副歌的節拍，也就是鼓的部份要如何打節奏，讓它聽起來比較順。</p>
+                            <p class="p">音樂創作完成以後，三首歌會再讓視覺組填上畫面，預先繪製好的分鏡圖就成為兩組之間的溝通橋樑。「一開始發想旋律的階段還沒有看分鏡圖，等到把基礎旋律寫出來後，再去試著對上。」蔓婕說道。</p>
+                            <figure class="piccenter figure">
+                                <img src="b-music1/music1_3.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">視覺組和音樂組透過分鏡圖溝通，把音效和畫面對到精準。</figcaption>
+                            </figure>
+                            <p class="p">想在〈Absolute〉中置入「沙漏」的聲音，蔓婕會看著分鏡圖，想像視覺組接下來會如何構圖，而她應該要把這個音效放在哪段。而分鏡圖中若有碎掉的畫面，她也會嘗試加入玻璃破碎的聲音。</p>
+                            <p class="p">創作的過程中，有些片段原先想嘗試特殊的效果，最後為求歌曲的完整度便捨棄。子旻下載了很多 Future Bass Sample Pack ，裡面就會有鼓聲或 Snare Drum 等，這種曲風常用的節奏，只不過多半很難套用。</p>
+                            <p class="p">上學期末，蔓婕在中正圖書館參與「政大之聲」的創作展覽，當時就有利用機會先嘗試她想做的感覺。不過，正式寫曲的時候，部份音樂就沒有運用上。「Ableton 的介面有一個地方是可以存一些小的音檔，當時有些做過的嘗試，很多後來就只放在那，沒有加入到曲子裡。」</p>
+                            <figure class="piccenter figure">
+                                <img src="b-music1/music1_4.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">蔓婕的編曲軟體 Ableton 裡，存有許多嘗試階段的音樂素材。</figcaption>
+                            </figure>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">樂器到軟體，把音符轉化為 MIDI</h2>
+
+                            <p class="p">雖然沒有接觸過編曲軟體，不過子旻和蔓婕都有學習樂器的經歷。對蔓婕而言，之前的音樂學習經歷當然有所幫助，但在創作時也會造成限制。「我之前學的是長笛、豎笛和鋼琴，所以習慣往交響樂的方向寫，和我們所要的流行音樂有些差距。」</p>
+                            <p class="p">「不過我覺得好處是節奏可以很精準。」若直接錄製彈奏鋼琴的旋律，可能會受到手的速度影響；如果彈錯了，整段都會聽起來很奇怪。不過用電腦寫出來就會很準。</p>
+                            <p class="p">子旻卻因為已經習慣鋼琴的鍵盤，能在沒有樂譜的情況下直接彈奏。「可能是常彈吧！按了一個音，手就會很順的跟過去（彈出和弦）。」用編曲軟體 Ableton 的時候，是把一個又一個 MIDI 畫上，很難一看螢幕就知道要搭配上什麼旋律。</p>
+                            <figure class="piccenter figure">
+                                <img src="b-music1/music1_5.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">透過 Ableton，需要用 MIDI 訊號而非音符寫曲。</figcaption>
+                            </figure>
+                            <p class="p">《超公制》在創作期間沒有固定的形式或答案，一首歌需要由什麼構成，由音樂組自由發想。蔓婕以兩種旋律相疊，最下面墊上鼓聲。子旻則是將兩個旋律分為主要與次要，再搭上和弦和 Bass。「如果只有單音的話，會感覺空空的，下面一定要再有一層。」</p>
+                            <p class="p">Ableton 內建非常多效果器，也可以自己加上 plug-in。不過蔓婕說道，其實後來也只用特定幾個。除了主旋律之外，會再套一些 Phaser 或是加上 echo，讓歌曲更有感覺。</p>
+                            <p class="p">也因此，正式以軟體編曲時，多半會使用合成器而非特定樂器。蔓婕興奮地分享，Ableton 會幫合成器取名字，比如說叫 Amsterdam，就會給人一種舒服的感覺。「因為我畫出來是的 MIDI
+                                訊號，可以套不同合成器，看看怎樣的效果比較好。」
+                            </p>
+                            <p class="p">概念是相對自由的〈Relative〉中，子旻想嘗試聽起來很酷的鼓聲。但因為對鼓的節奏感沒有那麼了解，嘗試期間一直受挫。參考現成音樂時，也會發現歌曲中的鼓都做得滿複雜。</p>
+                        </div>
+                        <div class="flex-container">
+                            <img class="flex-item" src="a-index/logo-music.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 這邊是第4張卡片 音樂二-->
+            <div style="border: 0ch" class="card">
+                <div class="card-header" id="headingRight">
+                    <h5 class="mb-0">
+                        <div class="title-left btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <div>
+                                <span style="font-weight: 500">淺談數位數位藝術作品聲音設計</span>
+                                <span style="font-size: 15px">（下）</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-music.png"></img>
+                            </div>
+                        </div>
+                        <button style=" position: relative; padding: 0px; border: 0px;" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour">
+                            <div class="viewer">
+                                <img class="pic1" src="a-index/music2.jpg"></img>
+                            </div>
+                        </button>
+                        <div class="title-mobile btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <div>
+                                <span style="font-weight: 500">淺談數位數位藝術作品聲音設計</span>
+                                <span style="font-size: 15px">（下）</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-music.png"></img>
+                            </div>
+                        </div>
+                    </h5>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="closeButton" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span>X</span>
+                        </button>
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2" style="margin-top:65px">關於創作，那些難以言喻的小故事</h2>
+
+                            <p class="p">為了提升和視覺組的溝通效率，即便《超公制》工作流程為音樂先行，音樂組會在創作出主要架構後，先釋出 Demo 版本，讓其他組員透過片段建構完整歌曲的想像。 </p>
+                            <p class="p">子旻表示，「Demo 版會先確定主次旋律，完整版則會再增加幾軌。」另外，因為有時候會爆音，會再調整 EQ 等聲音細節。若同時有兩軌以上的聲音，也要注意不能互相排斥，需要再做細部修正。「主要就是要讓整首聽起來更豐富，觀眾不會馬上就猜
+                                出來我們是怎麼設計的。」蔓婕解釋道。 </p>
+                            <p class="p">創作時蔓婕通常都是一次性完成同一段的所有樂器，待一個部份處理完後才會進到下一段。因此很常發生雖然已將心中所想得音軌填完，聽起來卻仍覺得很「空」，陷入瓶頸、無法繼續編曲。</p>
+                            <p class="p">「〈Absolute〉原本一直給我很『低沉』的感覺，尤其是倒數第二段銜接到鋼琴的聲音出現。」蔓婕一開始用吉他做主旋律，卻總感覺少了一些元素，墊很多層還是沒辦法解決此問題，直到後來換成鋼琴才好轉。</p>
+                            <figure class="piccenter figure">
+                                <img src="c-music2/music2_1.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">〈Absolute〉0’54’’ 原本是以吉他為主，後來才改為鋼琴。 </figcaption>
+                            </figure>
+                            <p class="p">「我後來覺得一首歌不能重複聽太多次。」子旻說道。當她寫到一半的時候，因為前面的部份已經聽了太多次，後面反而會覺得缺乏發展性。「第一次聽的時候，會發現哪邊還想加強，但聽越多次反而會覺得合理。」</p>
+                            <div class="blockquote">我一直在想如果歌曲的主題是「相對」的話，其實「音調」本身也可以做成相對的感覺。</div>
+                            <img class="piccenter person-icon" src="a-index/logo-music.png"></img>
+                            <figure class="embed-responsive embed-responsive-16by9 figure youtube">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZXLnACz_KQg?controls=0" frameborder="0" allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                            <p class="p">「換句話說就是，雖然不同調可是聽起來是一樣的。」子旻點出 〈Relative〉最 一開始 ，由 E 大調的 Mi-La 轉為 C 大調的 Do-Sol，其實結構相同，卻能製造出不同氛圍。
+                                此作法從 〈Relative〉 最初直到拍子出現前都是這個基 調，調整其 wavetable position ，當它往下轉音程就會越來越低，同時慢慢加入和弦。 </p>
+                            <figure class="piccenter figure">
+                                <img src="c-music2/music2_2.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">〈Relative〉前段藉由調整 wavetable position，製造出「相對」之感。 </figcaption>
+                            </figure>
+                            <p class="p">「歌曲一直有細微的變化，聽起來卻是和諧的。這就是我覺得這個樂器很有趣的地方。」子旻表示，為了強調效果，她還刻意將 BPM 設得很慢，並且廣泛使用在整首歌裡。 </p>
+                            <p class="p">蔓婕說到，她很喜歡〈Absolute〉1’50’’ 處，當沙漏和鈴鼓的聲音出現，搭配著節拍的感受。因為在非正常的節奏裡，卻包含著有趣的聲響。 </p>
+                            <p class="p">當歌曲透過音響播出後，有一些細節和戴耳機創作時聽起來不盡相同。子旻希望現場觀眾可以聽到〈Intro〉的每個低音，因其在歌曲中扮演著重要的角色。 </p>
+                            <p class="p">蔓婕則表示〈Absolute〉的高音反而是特色，「因為我的節奏很重，高音就會被犧牲掉。」即便 Ableton 裡面可以個別調整音軌的音量，不過旋律的音軌音量已經調大， 輸出後鼓的聲音還是比較明顯。
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">如果你／妳也有興趣踏上創作的旅途</h2>
+
+                            <p class="p">這是音樂組的兩人第一次擔任音樂設計一職，然而，經過這次的創作經驗，她們都笑著說，「未來如果沒有機會的話，應該就不會主動去寫了。」、「太痛苦了。」</p>
+                            <p class="p">子旻認為，雖然在具有時間壓力的情況下，創作過程很難全然愉悅，但有時投入創作後會找到有趣之處。「就像嘗試著用各種旋鈕來調整歌曲，聽聽看有什麼差別的時候。」</p>
+                            <p class="p">假設未來某一天，有人想要從零開始學習創作歌曲，蔓婕仍然會推薦他去勇敢嘗試。「說不定他是這方面的天才，只是之前沒有接觸過，就會覺得很快樂。」子旻也補充，「或是他雖然不是這方面的天才，但因為這樣反而寫出很有趣的歌。」</p>
+                        </div>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">後記：偷偷與看完文章的你／妳分享</h2>
+                            <p class="p">蔓婕：「不要隨便踏上寫歌這條路!」</p>
+                            <p class="p">子旻：「請大家鞭小力一點。」</p>
+                        </div>
+                        <div class="flex-container">
+                            <img class="flex-item" src="a-index/logo-music.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 這邊是第5張卡片 PM-->
+            <div style="border: 0ch" class="card">
+                <div class="card-header" id="headingLeft">
+                    <h5 class="mb-0">
+                        <button style=" position: relative; padding: 0px; border: 0px;" class="btn btn-link" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="true" aria-controls="collapseFive">
+                            <div class="viewer">
+                                <img class="pic1" src="a-index/PM.jpg"></img>
+                            </div>
+                        </button>
+                        <div class="title-right btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            <div>
+                                <span style="font-weight: 500">如何當一名學生畢業製作 PM</span>
+                            </div>
+                            <div>
+                                <img style="width: 40px" src="a-index/logo-PM.png"></img>
+                            </div>
+                        </div>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <button class="closeButton" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <span>X</span>
+                        </button>
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">PM 在《超公制》做些什麼</h2>
+
+                            <h3 class="h3">進度規劃</h3>
+                            <p class="p">最一開始，育瑩先想了一下《超公制》的時程規劃，以月份為單位，從作品的角度思考，在第幾個月的時候，作品應該要完成到百分之多少。因為展期是 5 月中，所以必須在這之前完成，由此回推每一個月應該要推進的進度。</p>
+                            <p class="p">接著，綜合考慮中間穿插的假期。像是過年期間要讓大家各自回家休息，在這之間即便訂了進度也會因為各種家庭因素很難配合，一開始制定計劃的時候就得把所有事情考慮清楚。</p>
+
+                            <!--動態圖片1-->
+                            <figure class="piccenter figure">
+                                <div class="change1">
+                                    <img src="f-PM/1/1-bg.png" width="412px" class="change1pic"></img>
+                                    <div id="changeV1">〈Intro〉</div>
+                                    <div id="changeV2">〈Absolute〉</div>
+                                    <div id="changeV3">〈Relative〉</div>
+                                    <div id="changeM1">〈Intro〉</div>
+                                    <div id="changeM2">〈Absolute〉</div>
+                                    <div id="changeM3">〈Relative〉</div>
+                                    <div id="changeI1">〈Intro〉</div>
+                                    <div id="changeI2">〈Absolute〉</div>
+                                    <div id="changeI3">〈Relative〉</div>
+                                    <div id="changeP1">社群經營</div>
+                                    <div id="changeP2">宣傳活動</div>
+                                    <div id="changeP3">展覽籌劃</div>
+                                </div>
+                                <figcaption class="interactionimgcaption" style="margin-top: -220px">《超公制》首次展期為五月中旬，但為了參賽將作品提前至四月初完成，也因此獲得不少優化的時間。 </figcaption>
+                            </figure>
+
+                            <!-- <figure class="piccenter figure">
+                                <img src="f-PM/1/PM-1a.png" width="412px"></img>
+                                <figcaption class="imgcaption">《超公制》首次展期為五月中旬，但為了參賽將作品提前至四月初完成，也因此獲得不少優化的時間。 </figcaption>
+                            </figure> -->
+
+                            <h3 class="h3">工作分配</h3>
+
+                            <!--動態圖片2-->
+                            <figure class="piccenter figure" style="width: 550px; margin-top: 15px;">
+                                <div class="change2">
+                                    <div id="change21">〈Intro〉</div>
+                                    <div id="change22">互動一</div>
+                                    <div id="change23">〈Absolute〉</div>
+                                    <div id="change24">互動二</div>
+                                    <div id="change25">〈Absolute〉</div>
+                                    <div id="change26">互動三</div>
+                                    <div id="change27" style="margin-bottom: 15px">〈Relative〉</div>
+                                </div>
+                                <figcaption class="interactionimgcaption">《超公制》作品整體規劃。 </figcaption>
+                            </figure>
+
+                            <!-- <figure class="piccenter figure">
+                                <img src="f-PM/2/PM-21.png" width="412px"></img>
+                                <figcaption class="imgcaption">《超公制》作品整體規劃。</figcaption>
+                            </figure> -->
+
+                            <p class="p">完成總體作品計畫之後，再針對各個組別，分別制定詳細的工作內容和進程，並且在每週的例會上決議，讓組員培養每週都要達成進度的習慣。</p>
+                            <p class="p">比方說前期構思作品內容的階段，音樂組就會負責整理合適的音樂風格 reference、選擇編曲軟體、研究音訊設備的配線邏輯等；視覺組同樣要找視覺的參考資料、思考作品裝置的呈現方式（例如投影該打在地面、牆上或是天花板）、繪製分鏡圖等；互動則需要了解作品需要用什麼軟硬體，尤其在像《超公制》只有一個偏工程端的組員，就需要花一點時間研究各硬體的串接方式。</p>
+                            <p class="p">而育瑩的工作就是，把這些一個又一個該做的事明確地分配給指定的組別或特定組員，確保直到下週再次開會前，每週預排的進度都會實際前進，作品才會真的有可能在時間內完成。此外，設計開會流程與議程，避免開會沒有效率，開了一個下午卻什麼事也沒決定好。</p>
+                            <p class="p">當然過程中也會遇到許多問題，每週安排好的進度有時難以達成，但以週次為單位就能即時地尋找有效幫助。</p>
+
+                            <h3 class="h3">行銷宣傳</h3>
+                            <p class="p">《超公制》是一個大型的裝置作品，所以線上宣傳很重要，因為大家可以藉此初步認識這個作品。隨著進程到了下半年，則藉由臉書粉絲專頁持續曝光，適時地更新近況，同時紀錄作品的製作過程。並且發揮育瑩的新聞系專長，發表各組長篇文字訪談，把創作背後的故事和理念傳達出來，讓觀眾更加接近這個作品。</p>
+                            <figure class="piccenter figure">
+                                <img src="f-PM/PM_2.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">粉絲專頁能讓觀眾更加了解《超公制》的創作歷程。</figcaption>
+                            </figure>
+                            <p class="p">除此之外，只經營粉專顯然是不夠的。觀賞數位藝術裝置最好的方式，仍然是到現場當一個觀眾，好好地從頭到尾體驗。因此，《超公制》選擇在《失眠咖啡館》的創作市集擺攤，首次以模擬裝置讓觀眾觀看。並且做出了最重大的決定，下高雄參加今年度的放視大賞。</p>
+                            <figure class="piccenter figure">
+                                <img src="f-PM/PM_3.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">儘管擺攤當天天氣不太好，不過小小的鏡面裝置還是吸引了不少人好奇。</figcaption>
+                            </figure>
+                            <p class="p">和其他學校是整個科系參賽相比，育瑩表示，《超公制》就像是誤入歧途的小羔羊，「不過能夠讓更多人看見我們，並且和各個學校優秀的作品切磋、打開眼界，我想對於一個畢業製作來說是非常值得的。」（最後作品入圍
+                                2018 放視大賞「跨領域類」決賽、「動態視覺類」複賽）
+                            </p>
+                            <figure class="piccenter figure">
+                                <img src="f-PM/PM_4.jpg" width="412px"></img>
+                                <figcaption class="imgcaption">隻身參加「放視大賞」是《超公制》目前最大型的校外展出。</figcaption>
+                            </figure>
+
+                            <h3 class="h3">行政管理</h3>
+                            <p class="p">不論是音樂、視覺或是互動，《超公制》的每一個組員都要負責作品很大一部份。就執行面，育瑩其實幾乎不太參與作品創作本身，而是確認每個人的進度。</p>
+                            <div class="blockquote">希望組員們不需要擔心創作之外的事。</div>
+                            <p class="p">換句話說，育瑩需要將所有行政事務處理好，舉凡和老師及助教聯繫、借用設備和購買器材、構思會議流程和進度、準備好期中和期末報告、與策展組溝通組內需求、彙整比賽資訊、繳交報名文件、蒐集粉專發文素材、記得所有組員講過但又會忘記的事等。一切的一切，在能力範圍內，都應該要妥善完成或至少先想好對策。</p>
+                            <p class="p">最後，育瑩會反覆的確保所有事情，組員皆有達成共識。在分工明確的情況下，每個人都還是要擁有相同的共同目標。「每次開會遇到僵局時，我一定會讓每一位組員都發表各自的意見，在最理性的狀態下溝通清楚，畢竟吵架絕對是整個合作模式和關係最不好的結果。」</p>
+                            <figure class="piccenter figure">
+                                <img src="f-PM/PM_5.jpg" width="412px"></img>
+                            </figure>
+                        </div>
+                        <img class="piccenter person-icon" src="a-index/logo-PM.png"></img>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">畢業製作為什麼需要 PM</h2>
+                            <p class="p" style="margin-top:65px">2017 去年第一次踏進心健老師的辦公室時，組員們帶著很不完整的作品概念，準備和老師討論。因為那時候是第一次提案，組內其實並未經過太多討論，所以老師就拿出一張紙，快速整理了整個作品的呈現形式，並且要大家選出一位
+                                PM。往後與老師討論前都要先經過組內討論，做好萬全準備、報告當週進度、以及規劃短中長期目標。
+                            </p>
+                            <p class="p">於是育瑩就在 PM 是什麼都不知道的情況下，正式變成《超公制》的 PM（Project Manager）了！</p>
+
+                            <figure class="piccenter figure">
+                                <img src="f-PM/PM_1.jpg" width="412px"></img>
+                            </figure>
+
+                            <p class="p">育瑩花了一些時間，上網找資料研究一番，先總結常見的 PM 工作，是負責產品流程管理者，需要掌控人力、懂一點技術、善於利用分析工具，把一個又一個產品寶寶孵化出來。</p>
+                            <p class="p">不過，學生畢業製作畢竟規模不如一般商業公司，對《超公制》來說重要的不是是否賺錢，而是把在別人眼中小小的、微不足道的作品，在畢業的這一年，拿出自己 200% 的努力和時間，剖開自己辛苦存錢的小豬，把現在的自己好好地呈現出來。</p>
+                            <p class="p">所以，育瑩認為學生的畢業製作裡，PM 很重要，但和商業公司的 PM 工作內容略有不同。重要的原因可以分為以下四點：</p>
+                        </div>
+
+                        <h3 class="h3">學生很忙又很混</h3>
+                        <p class="p">尤其是大四這年，學生們正慌忙的準備就業、準備考研究所、準備實習、準備出國深造、準備延畢，還有各種外務。「我們很忙，而且我們很混。」好不容易獲得空閒時間，能不工作就先暫時休息，很少有人願意提前先為事情做好準備。</p>
+
+                        <h3 class="h3">看不見長期目標</h3>
+                        <p class="p">承上一點，因為學生都很忙又很混，所以勢必需要有人去定義整個作品的具體目標，以及每個階段的任務。如果團隊裡面缺乏一個主要負責總體規劃者，為期一年的畢業製作，很容易因為眼前有更多十萬火急的事務需要被處理，最終因為每日繁雜的行程，壓縮到作品完成的時間和構想的精力。</p>
+
+                        <h3 class="h3">有效的工作分配</h3>
+                        <p class="p">以《超公制》為例，組內很快地確立了每人個別負責的範圍後，就會開始各自針對自己要完成的部分進行研究以及實作。也因此，有些組員陸續完成自己手上的工作後，或是等待其他組員把作品交接過來之前，都會經歷短暫的空白期。如果沒有妥善規劃好這期間，空閒中的組員們很難知道作品是否仍有共同待辦事項尚未完成，光把時間浪費在等待上。</p>
+
+                        <h3 class="h3">最大化作品效益</h3>
+                        <p class="p">《超公制》花了一整年的時間創作，如果有好的行銷團隊幫忙宣傳，或是花錢下廣告，當然能夠觸及到更多的觀眾。但很可惜的，現實是團隊成員不多，沒有多餘的人力和心力行銷，更沒有多餘的錢可以揮霍，只有一顆最真誠且無價的心。想要讓作品有更好的曝光，靠得不只是網路社群行銷，還要不斷地往外尋找資源，寫寫文章；甚至直接走出學校，尋找更大更好的場地，讓更多人能夠看見你的作品。</p>
+
+                        <div style="margin-bottom: 65px">
+                            <h2 class="h2">後記：偷偷與看完文章的你／妳分享</h2>
+                            <p class="p">在擔任 PM 期間，育瑩認為自己有很多做得不好的地方，像是初期對於作品規模不確定，花了很久時間企劃、多次更改形式。也曾經苦惱過自己的畢業製作中，沒有參與「創作」，是否很可惜。</p>
+                            <p class="p">「不過，我想這真的是一個對我來說很好的機會，相較於創作，能夠在 PM 這個領域發揮所長，才是為作品、組員和我自己帶來最好的幫助。」</p>
+                        </div>
+                        <div class="flex-container">
+                            <img class="flex-item" src="a-index/logo-PM.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div style="margin-top: 15%; margin-bottom: 30px; text-align: center">
+                <a href="https://www.facebook.com/EXISTEM.NCCU/" style="text-decoration:none;" target="_blank">
+                    <img src="a-index/fb.png" border="0" width="43px" class="footerIcon">
+                </a>
+                <img src="a-index/logo-dark.png" border="0" width="80px" class="footerIcon">
+                <a href="https://www.instagram.com/existemnccu/" style="text-decoration:none;" target="_blank">
+                    <img src="a-index/ig.png" border="0" width="43px" class="footerIcon">
+                </a>
+                <div class="footer">
+                    <div style="margin-top: 10px;">視覺設計｜廖珞安 謝明倫</div>
+                    <div>聲音設計｜張子旻 游蔓婕</div>
+                    <div>互動設計｜邵亮華</div>
+                    <div>專案經理｜朱育瑩</div>
+                    <div>網頁設計｜朱育瑩 汪芝瑜 吳謙 楊采翎 謝明倫 </div>
+                    <div style="margin-top: 20px;">2018 超公制 ©All rights reserved.</div>
+                </div>
+            </div>
+        </footer>
+        <a class="scrollToTop" href="#">
+            <img src="a-index/logo-dark.png" alt="Back to Top">
+            <img src="a-index/logo.png">
+        </a>
+    </article>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<!-- // Get the click event -->
+<script>
+    $('.scrollToTop').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 400);
+        return false;
+    });
+</script>
+
+</html>
